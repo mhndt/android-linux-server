@@ -1,0 +1,65 @@
+--- Namespaces ---
+Namespaces: enabled
+Utsname namespace: enabled
+Ipc namespace: enabled
+Pid namespace: enabled
+User namespace: enabled
+newuidmap is not installed
+newgidmap is not installed
+Network namespace: enabled
+
+--- Control groups ---
+Cgroups: enabled
+Cgroup namespace: enabled
+Cgroup v1 mount points:
+ - /dev/blkio
+ - /dev/cpuctl
+ - /dev/cpuset
+ - /dev/memcg
+ - /sys/fs/cgroup/devices
+ - /sys/fs/cgroup/blkio
+ - /sys/fs/cgroup/cpu
+ - /sys/fs/cgroup/cpuacct
+ - /sys/fs/cgroup/cpuset
+ - /sys/fs/cgroup/freezer
+ - /sys/fs/cgroup/memory
+ - /sys/fs/cgroup/pids
+Cgroup v2 mount points:
+ - /sys/fs/cgroup
+ - /sys/fs/cgroup/cg2_bpf
+Cgroup v1 systemd controller: missing
+Cgroup v1 clone_children flag: enabled
+Cgroup device: enabled
+Cgroup sched: enabled
+Cgroup cpu account: enabled
+Cgroup memory controller: enabled
+Cgroup cpuset: enabled
+
+--- Misc ---
+Veth pair device: enabled, not loaded
+Macvlan: enabled, not loaded
+Vlan: enabled, not loaded
+Bridges: enabled, not loaded
+Advanced netfilter: enabled, not loaded
+CONFIG_NF_NAT_IPV4: enabled, not loaded
+CONFIG_NF_NAT_IPV6: missing
+CONFIG_IP_NF_TARGET_MASQUERADE: enabled, not loaded
+CONFIG_IP6_NF_TARGET_MASQUERADE: missing
+CONFIG_NETFILTER_XT_TARGET_CHECKSUM: enabled, not loaded
+CONFIG_NETFILTER_XT_MATCH_COMMENT: enabled, not loaded
+FUSE (for use with lxcfs): enabled, not loaded
+
+--- Checkpoint/Restore ---
+checkpoint restore: missing
+CONFIG_FHANDLE: missing
+CONFIG_EVENTFD: enabled
+CONFIG_EPOLL: enabled
+CONFIG_UNIX_DIAG: missing
+CONFIG_INET_DIAG: enabled
+CONFIG_PACKET_DIAG: missing
+CONFIG_NETLINK_DIAG: missing
+File capabilities: enabled
+
+Note: Before booting a new kernel, you can check its configuration with:
+
+  CONFIG=/path/to/config lxc-checkconfig
